@@ -32,7 +32,7 @@
         tools:layout="@layout/fragment_whats_new" />
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.example.android2finalproject.viewPagerFragment"
+        android:name="com.example.android2finalproject.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" />
 
