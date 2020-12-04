@@ -1,6 +1,8 @@
 package com.example.android2finalproject;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.icu.text.ScientificNumberFormatter;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -70,7 +72,7 @@ public class ContactFragment extends Fragment {
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[] emailAddress = {"w0549527@myscc.ca"};
+                String[] emailAddress = {"vincesvintagefinds@gmail.com"};
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL, emailAddress);
@@ -96,27 +98,40 @@ public class ContactFragment extends Fragment {
             }
         });
 
-        Button phoneButton = view.findViewById(R.id.phoneButton);
-        phoneButton.setOnClickListener(new View.OnClickListener() {
+
+        Button phone = view.findViewById(R.id.phoneButton);
+        phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Uri number = Uri.parse("tel:5195559090");
+                Intent intent = new Intent(Intent.ACTION_DIAL, number);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(intent);
+                } else {
+                Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+            }
             }
         });
-
-        Button instagramButton = view.findViewById(R.id.instagramButton);
-        instagramButton.setOnClickListener(new View.OnClickListener() {
+        Button instaButton = view.findViewById(R.id.instagramButton);
+        instaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = getActivity().getPackageManager().getLaunchIntentForPackage("com.instagram.android");
+                intent.setComponent(new ComponentName( "com.instagram.android", "com.instagram.android.activity.UrlHandlerActivity"));
+                intent.setData( Uri.parse( "https://www.instagram.com/_u/vincesvintagefinds") );
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(intent);
+            } else {
+                Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
             }
-        });
+        }
+    });
 
         Button websiteButton = view.findViewById(R.id.websiteButton);
         websiteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri website = Uri.parse("http://www.vintagevince.com");
+                Uri website = Uri.parse("http://www.vintagevinces.com");
                 Intent intent = new Intent(Intent.ACTION_VIEW, website);
                 if (intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
