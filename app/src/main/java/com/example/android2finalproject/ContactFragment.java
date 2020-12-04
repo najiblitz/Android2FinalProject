@@ -126,6 +126,14 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        Button shareButton = view.findViewById(R.id.shareButton);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         return view;
     }
 }
