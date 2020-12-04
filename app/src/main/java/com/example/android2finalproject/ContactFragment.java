@@ -1,12 +1,18 @@
 package com.example.android2finalproject;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +65,67 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact, container, false);
+        Button emailButton = view.findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] emailAddress = {"w0549527@myscc.ca"};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, emailAddress);
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Question/Comment from Vince's Vintage App");
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                } else {
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
+        Button locationButton = view.findViewById(R.id.locationButton);
+        locationButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Uri location = Uri.parse("geo:0,0?q=42.0485549,-82.6181520(Vintage Vince");
+                Intent intent = new Intent(Intent.ACTION_VIEW, location);
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                } else {
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        Button phoneButton = view.findViewById(R.id.phoneButton);
+        phoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Button instagramButton = view.findViewById(R.id.instagramButton);
+        instagramButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Button websiteButton = view.findViewById(R.id.websiteButton);
+        websiteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri website = Uri.parse("http://www.vintagevince.com");
+                Intent intent = new Intent(Intent.ACTION_VIEW, website);
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                } else {
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        return view;
     }
 }
