@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -67,7 +68,7 @@ public class ContactFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
-        Button emailButton = view.findViewById(R.id.emailButton);
+        ImageButton emailButton = view.findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +84,8 @@ public class ContactFragment extends Fragment {
                 }
             }
         });
-        Button locationButton = view.findViewById(R.id.locationButton);
+
+        ImageButton locationButton = view.findViewById(R.id.locationButton);
         locationButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -97,8 +99,16 @@ public class ContactFragment extends Fragment {
             }
         });
 
-        Button phone = view.findViewById(R.id.phoneButton);
-        phone.setOnClickListener(new View.OnClickListener() {
+        ImageButton instagramButton = view.findViewById(R.id.instagramButton);
+        instagramButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        ImageButton phonePic = view.findViewById(R.id.phoneButton);
+        phonePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Uri number = Uri.parse("tel:5195559090");
@@ -109,15 +119,7 @@ public class ContactFragment extends Fragment {
             }
         });
 
-        Button instagramButton = view.findViewById(R.id.instagramButton);
-        instagramButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        Button websiteButton = view.findViewById(R.id.websiteButton);
+        ImageButton websiteButton = view.findViewById(R.id.websiteButton);
         websiteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,7 +133,7 @@ public class ContactFragment extends Fragment {
             }
         });
 
-        Button shareButton = view.findViewById(R.id.shareButton);
+        ImageButton shareButton = view.findViewById(R.id.shareButton);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,4 +151,6 @@ public class ContactFragment extends Fragment {
 
         return view;
     }
+
+
 }

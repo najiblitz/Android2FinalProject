@@ -3,65 +3,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     tools:context=".ContactFragment">
 
-    <TextView
-        android:id="@+id/contactTitle"
+    <ImageView
+        android:id="@+id/contactUsImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="50dp"
+        android:layout_height="310dp"
         android:layout_weight="1"
-        android:text="@string/menu_contact" />
+        android:src="@drawable/contactus" />
 
-    <Button
-        android:id="@+id/phoneButton"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/phoneButton" />
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
-    <Button
-        android:id="@+id/emailButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/emailButton" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/websiteButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/websiteButton" />
+            <ImageButton
+                android:id="@+id/phoneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:background="@color/colorAccent"
+                android:src="@drawable/phone" />
 
-    <Button
-        android:id="@+id/locationButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/loactionButton" />
+            <ImageButton
+                android:id="@+id/emailButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:background="@color/colorAccent"
+                android:src="@drawable/email" />
 
-    <Button
-        android:id="@+id/instagramButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/instagramButton" />
+            <ImageButton
+                android:id="@+id/websiteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:background="@color/colorAccent"
+                android:src="@drawable/website" />
 
-    <Button
-        android:id="@+id/shareButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/shareButton" />
+            <ImageButton
+                android:id="@+id/locationButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:background="@color/colorAccent"
+                android:src="@drawable/location" />
 
-    <Button
-        android:id="@+id/oneMoreButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/oneMoreButton" />
+            <ImageButton
+                android:id="@+id/instagramButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:background="@color/colorAccent"
+                android:src="@drawable/instagram" />
+
+            <ImageButton
+                android:id="@+id/shareButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:background="@color/colorAccent"
+                android:src="@drawable/sharewebsite" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:background="@color/colorAccent"
+                android:src="@drawable/phone" />
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>
