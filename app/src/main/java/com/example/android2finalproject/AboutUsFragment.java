@@ -1,12 +1,22 @@
 package com.example.android2finalproject;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +29,8 @@ public class AboutUsFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    TextView answer;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -59,6 +71,50 @@ public class AboutUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about_us, container, false);
+        View view = inflater.inflate(R.layout.fragment_about_us, container, false);
+        final ListView listView = view.findViewById(R.id.aboutUsList);
+        answer = view.findViewById(R.id.answer);
+        ArrayList<AboutUsInfo> aboutUsInfoArrayList = new ArrayList<>();
+        aboutUsInfoArrayList.add(new AboutUsInfo("What we do?","thrisfjisd sdnfdsnjdsm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
+        aboutUsInfoArrayList.add(new AboutUsInfo("Who is Vince?","tm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
+        aboutUsInfoArrayList.add(new AboutUsInfo("Who is Vince?","tm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
+        aboutUsInfoArrayList.add(new AboutUsInfo("Who is Vince?","tm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
+        aboutUsInfoArrayList.add(new AboutUsInfo("Who is Vince?","tm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
+        aboutUsInfoArrayList.add(new AboutUsInfo("Where do we find our items?","thridnfdsnjdsm dsjvndj  nfn fdksfjisjdfjsd vdsjf djf sdv ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
+//        ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, aboutUsInfoArrayList);
+        listView.setAdapter(new CustomListViewAdapter(getContext(),aboutUsInfoArrayList));
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Log.d("NOTHING", "" + position);
+//                answer.setText(((AboutUsInfo)listView.getItemAtPosition(position)).getAnswer());
+//            }
+//        });
+        return view;
     }
+
+
+    public class CustomListViewAdapter extends ArrayAdapter<AboutUsInfo>{
+
+        public CustomListViewAdapter(@NonNull Context context, ArrayList<AboutUsInfo> infos) {
+            super(context, 0, infos);
+        }
+
+        @NonNull
+        @Override
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            if (convertView == null) {
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.listview_about_us, parent,false);
+                TextView question = convertView.findViewById(R.id.question);
+                question.setText(getItem(position).getQuestion());
+                TextView answer = convertView.findViewById(R.id.answer);
+                answer.setText(getItem(position).getAnswer());
+            }
+
+            return convertView;
+
+
+        }
+    }
+
 }

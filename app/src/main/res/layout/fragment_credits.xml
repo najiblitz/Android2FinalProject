@@ -9,20 +9,20 @@
 
     <ImageView
         android:id="@+id/contactUsImage"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:src="@drawable/contactus" />
+        android:src="@drawable/credits" />
 
     <TextView
         android:id="@+id/creditContent"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="571dp"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:textColor="@color/darkText"
         android:text="@string/creditContent"
         android:textAlignment="center"
+        android:textColor="@color/darkText"
         android:textSize="30sp" />
 
 </LinearLayout>
