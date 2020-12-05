@@ -19,6 +19,7 @@ import com.google.android.material.snackbar.Snackbar;
  * Use the {@link ContactFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class ContactFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -96,11 +97,15 @@ public class ContactFragment extends Fragment {
             }
         });
 
-        Button phoneButton = view.findViewById(R.id.phoneButton);
-        phoneButton.setOnClickListener(new View.OnClickListener() {
+        Button phone = view.findViewById(R.id.phoneButton);
+        phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Uri number = Uri.parse("tel:5195559090");
+                Intent intent = new Intent(Intent.ACTION_DIAL, number);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
             }
         });
 
@@ -116,7 +121,7 @@ public class ContactFragment extends Fragment {
         websiteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri website = Uri.parse("http://www.vintagevince.com");
+                Uri website = Uri.parse("http://www.vincesvintagefinds.com");
                 Intent intent = new Intent(Intent.ACTION_VIEW, website);
                 if (intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
@@ -130,7 +135,15 @@ public class ContactFragment extends Fragment {
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("smsto:"));
+            intent.putExtra("sms_body","Check Out Vince's Vintage Finds:" +
+                    "https:/www.vincesvintagefinds.com");
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                } else {
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }
             }
         });
 
