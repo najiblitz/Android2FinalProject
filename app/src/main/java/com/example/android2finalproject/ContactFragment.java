@@ -102,7 +102,7 @@ public class ContactFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Uri number = Uri.parse("tel:5195559090");
-                Intent intent = new Intent(Intent.ACTION_DIAL, number);
+                Intent intent = new Intent(Intent.ACTION_CALL, number);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }

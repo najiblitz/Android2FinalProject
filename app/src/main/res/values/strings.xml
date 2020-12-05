@@ -17,6 +17,12 @@
 
     // Home
 
+    <string name="home_title">Phone</string>
+    <string name="home_intro">Welcome to Vince\'s Vintage Finds! We are so glad you\'ve discovered our app! \n \n
+        Everyday we are adding new Products which you can find featured in our store! Head over to our Deals Section to
+        find out about new promotions and sales coming up! We cannot wait to see you, and we hope we can satisfy all your
+        vintage needs!</string>
+
     // Contact
 
     <string name="phoneButton">Phone</string>

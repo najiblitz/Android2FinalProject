@@ -82,7 +82,7 @@ public class WhatsNewFragment extends Fragment {
                     return ViewPagerFragment.newInstance("that", R.drawable.ic_launcher_background);
                 case 2:
                     return ViewPagerFragment.newInstance("them", R.drawable.ic_launcher_foreground);
-                default: return ViewPagerFragment.newInstance("404 Not Found",R.id.contactImage);
+                default: return ViewPagerFragment.newInstance("404 Not Found",R.id.homeTopImage);
             }
         }
 
