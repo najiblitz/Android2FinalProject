@@ -59,7 +59,7 @@ public class WhatsNewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_whats_new, container, false);
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
-        ViewPager viewPager = view.findViewById(R.id.viewpager);
+        ViewPager viewPager = view.findViewById(R.id.newContent);
         viewPager.setAdapter(adapter);
         return view;
     }
@@ -77,12 +77,12 @@ public class WhatsNewFragment extends Fragment {
 
             switch (position) {
                 case 0:
-                    return ViewPagerFragment.newInstance("this", R.drawable.picture);
+                    return ViewPagerFragment.newInstance("this", R.drawable.phone);
                 case 1:
-                    return ViewPagerFragment.newInstance("that", R.drawable.ic_launcher_background);
+                    return ViewPagerFragment.newInstance("that", R.drawable.email);
                 case 2:
-                    return ViewPagerFragment.newInstance("them", R.drawable.ic_launcher_foreground);
-                default: return ViewPagerFragment.newInstance("404 Not Found",R.id.homeTopImage);
+                    return ViewPagerFragment.newInstance("them", R.drawable.sharewebsite);
+                default: return ViewPagerFragment.newInstance("404 Not Found",R.id.shareButton);
             }
         }
 

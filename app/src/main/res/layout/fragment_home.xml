@@ -10,11 +10,10 @@
 
     <ImageView
         android:id="@+id/homeTopImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="368dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/title_image"
-        tools:src="@drawable/picture" />
+        app:srcCompat="@drawable/hometitle" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -49,10 +48,9 @@
             <ImageView
                 android:id="@+id/homeBottomImage"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="62dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/title_image"
-                tools:src="@drawable/picture" />
+                app:srcCompat="@drawable/hometitle" />
         </LinearLayout>
     </ScrollView>
 
