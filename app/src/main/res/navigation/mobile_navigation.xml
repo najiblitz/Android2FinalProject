@@ -33,8 +33,8 @@
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.android2finalproject.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" >
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings">
         <action
             android:id="@+id/action_settingsFragment_to_creditsFragment"
             app:destination="@id/nav_credits"
@@ -44,7 +44,7 @@
     <fragment
         android:id="@+id/nav_credits"
         android:name="com.example.android2finalproject.CreditsFragment"
-        android:label="fragment_credits"
+        android:label="@string/creditsTitle"
         tools:layout="@layout/fragment_credits" />
 
 </navigation>

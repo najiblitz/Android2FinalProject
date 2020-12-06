@@ -75,24 +75,18 @@ public class AboutUsFragment extends Fragment {
         final ListView listView = view.findViewById(R.id.aboutUsList);
         answer = view.findViewById(R.id.answer);
         ArrayList<AboutUsInfo> aboutUsInfoArrayList = new ArrayList<>();
-        aboutUsInfoArrayList.add(new AboutUsInfo("What we do?","thrisfjisd sdnfdsnjdsm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
-        aboutUsInfoArrayList.add(new AboutUsInfo("Who is Vince?","tm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
-        aboutUsInfoArrayList.add(new AboutUsInfo("Who is Vince?","tm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
-        aboutUsInfoArrayList.add(new AboutUsInfo("Who is Vince?","tm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
-        aboutUsInfoArrayList.add(new AboutUsInfo("Who is Vince?","tm dsjvndj  nfn ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
-        aboutUsInfoArrayList.add(new AboutUsInfo("Where do we find our items?","thridnfdsnjdsm dsjvndj  nfn fdksfjisjdfjsd vdsjf djf sdv ewnjn jwne nenknekw fnjsnjds dsjfnjkdsnfmsd "));
-//        ArrayAdapter arrayAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, aboutUsInfoArrayList);
-        listView.setAdapter(new CustomListViewAdapter(getContext(),aboutUsInfoArrayList));
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Log.d("NOTHING", "" + position);
-//                answer.setText(((AboutUsInfo)listView.getItemAtPosition(position)).getAnswer());
-//            }
-//        });
+
+        //(getResources().getStringArray(R.array.questions))
+        aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question1), "" + getResources().getString(R.string.answer1)));
+        aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question2), "" + getResources().getString(R.string.answer2)));
+        aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question3), "" + getResources().getString(R.string.answer3)));
+        aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question4), "" + getResources().getString(R.string.answer4)));
+        aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question5), "" + getResources().getString(R.string.answer5)));
+        aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question6), "" + getResources().getString(R.string.answer6)));
+        listView.setAdapter(new CustomListViewAdapter(getContext(), aboutUsInfoArrayList));
+
         return view;
     }
-
 
     public class CustomListViewAdapter extends ArrayAdapter<AboutUsInfo>{
 

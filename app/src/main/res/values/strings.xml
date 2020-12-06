@@ -36,13 +36,32 @@
 
     // About Us
 
+    <string name="question1">What is our mission?</string>
+    <string name="answer1">Here at <i><b>Vince\'s Vintage Finds</b></i>, we specialize in bringing the best old school clothing in the top condition to each of our loyal customers. Everyday we are out searching everywhere we can to find new pieces and are adding new products all the time.</string>
+    <string name="question2">What do we carry?</string>
+    <string name="answer2">We have tons of clothing, jewelery and accessories from the early 1920\'s to the late 1990\'s. We even sometimes get surprise furniture or decor available for sale as well.</string>
+    <string name="question3">Who is Vince?</string>
+    <string name="answer3">When Sam(owner of Vince\'s) was younger, she volunteered at a retirement home doing social activities with the residents. This is where Same met Vince. At the time, Vince was a 93 year old man who had spent his life working in a hobby shop. One thing that made Vince stand out was his fashion. He always had every piece of his outfit very thought out, and everything, even down to his socks matched perfect. He wore a lot of clothing he had from when he was younger. Much of his clothing was from around the 1940s. Since his clothes were so old, they weren\'t in the best condition. Sam decided to buy Vince a new outfit, and so she was off to search. This is when Sam first fell in love with vintage styles.</string>
+    <string name="question4">How do we find what we sell?</string>
+    <string name="answer4">Everyday we have employees out looking for new finds! We search yard sales, online, community sale pages and more! Not only to we actively search, we also are always looking to buy items off our customers. Have something you no longer wear and want to change it for something new? Bring it in and we will work with you on an offer so we end up with a new find and you end up with a new look!</string>
+    <string name="question5">What are our hours?</string>
+    <string name="answer5">We are open Monday through Saturday from 9am-8pm, and Sundays 11am-4pm</string>
+    <string name="question6">What are we doing to keep up with Covid?</string>
+    <string name="answer6">Here at Vince\'s we take all Covid regulations set by our government seriously. We ask that while you are in our store, you please where a mask and keep up with social distancing protocols. We also have sanitizer available throughout the store. As a precaution though, for the time being, our dressing rooms will be closed!</string>
+
     // Deals
 
     // New Products
 
+    // Settings
+
+    <string name="creditsTitle">Credits</string>
     // Credits
 
     <string name="creditContent">CREDITS GO HERE</string>
+    
+                // Pictures Used
+            <string name="womens_clothing">Image by <a href="https://pixabay.com/users/counselling-440107/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=483833">Ulrike Mai</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=483833">Pixabay</a></string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
