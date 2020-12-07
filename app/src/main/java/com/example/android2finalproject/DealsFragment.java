@@ -67,10 +67,10 @@ public class DealsFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recycler);
         ArrayList<Deals> deals = new ArrayList<>();
 
-        deals.add(new Deals(R.drawable.throwback));
-        deals.add(new Deals(R.drawable.jacket));
         deals.add(new Deals(R.drawable.jewellery));
+        deals.add(new Deals(R.drawable.jacket));
         deals.add(new Deals(R.drawable.throwback));
+        deals.add(new Deals(R.drawable.sunglasses));
         deals.add(new Deals(R.drawable.holiday));
 
 

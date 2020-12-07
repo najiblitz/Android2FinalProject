@@ -96,13 +96,13 @@ public class AboutUsFragment extends Fragment {
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-            if (convertView == null) {
+
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.listview_about_us, parent,false);
                 TextView question = convertView.findViewById(R.id.question);
                 question.setText(getItem(position).getQuestion());
                 TextView answer = convertView.findViewById(R.id.answer);
                 answer.setText(getItem(position).getAnswer());
-            }
+
 
             return convertView;
 
