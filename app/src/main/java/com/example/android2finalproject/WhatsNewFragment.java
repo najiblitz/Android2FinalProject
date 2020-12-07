@@ -88,7 +88,7 @@ public class WhatsNewFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return Integer.MAX_VALUE;
+            return 3;
         }
     }
 }

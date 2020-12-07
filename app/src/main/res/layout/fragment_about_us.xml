@@ -11,8 +11,15 @@
     <ImageView
         android:id="@+id/aboutUsTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="106dp"
         android:src="@drawable/aboutus" />
+
+    <ImageView
+        android:id="@+id/aboutUsImage"
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/womensclothing" />
 
     <ListView
         android:layout_width="match_parent"

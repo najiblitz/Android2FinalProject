@@ -66,7 +66,6 @@ public class ViewPagerFragment extends Fragment {
             info.setText(mParam1);
             ImageView picture = view.findViewById(R.id.image);
             picture.setImageResource(mParam2);
-
         }
         return view;
     }

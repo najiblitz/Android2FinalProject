@@ -100,19 +100,24 @@ public class ContactFragment extends Fragment {
         });
 
         ImageButton instagramButton = view.findViewById(R.id.instagramButton);
-        instagramButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+//        instagramButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Intent intent = new Intent(Intent.ACTION_, );
+////                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+////                    startActivity(intent);
+////                } else {
+////                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+////                }
+//            }
+//        });
 
         ImageButton phoneButton = view.findViewById(R.id.phoneButton);
         phoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Uri number = Uri.parse("tel:5195559090");
-                Intent intent = new Intent(Intent.ACTION_CALL, number);
+                Intent intent = new Intent(Intent.ACTION_DIAL, number);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 } else {

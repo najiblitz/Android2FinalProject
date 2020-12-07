@@ -76,7 +76,6 @@ public class AboutUsFragment extends Fragment {
         answer = view.findViewById(R.id.answer);
         ArrayList<AboutUsInfo> aboutUsInfoArrayList = new ArrayList<>();
 
-        //(getResources().getStringArray(R.array.questions))
         aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question1), "" + getResources().getString(R.string.answer1)));
         aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question2), "" + getResources().getString(R.string.answer2)));
         aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question3), "" + getResources().getString(R.string.answer3)));
