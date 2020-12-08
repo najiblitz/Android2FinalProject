@@ -100,17 +100,18 @@ public class ContactFragment extends Fragment {
         });
 
         ImageButton instagramButton = view.findViewById(R.id.instagramButton);
-//        instagramButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                Intent intent = new Intent(Intent.ACTION_, );
-////                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-////                    startActivity(intent);
-////                } else {
-////                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
-////                }
-//            }
-//        });
+        instagramButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/vinces.vintage.finds/"));
+                intent.setPackage("com.instagram.android");
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                } else {
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         ImageButton phoneButton = view.findViewById(R.id.phoneButton);
         phoneButton.setOnClickListener(new View.OnClickListener() {
@@ -148,6 +149,19 @@ public class ContactFragment extends Fragment {
             intent.setData(Uri.parse("smsto:"));
             intent.putExtra("sms_body","Check Out Vince's Vintage Finds:" +
                     "https:/www.vincesvintagefinds.com");
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                } else {
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        ImageButton facebookButton = view.findViewById(R.id.facebookButton);
+        facebookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href=https://www.facebook.com/vinces.vintage.finds/"));
                 if (intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 } else {

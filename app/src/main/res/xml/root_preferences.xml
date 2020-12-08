@@ -1,0 +1,20 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/font_color"
+        android:entryValues="@array/font_color"
+        android:key="textColor"
+        android:title="List preference" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="textSize"
+        android:title="Enlarge Text" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="buttonSize"
+        android:title="Enlarge Buttons" />
+
+</PreferenceScreen>

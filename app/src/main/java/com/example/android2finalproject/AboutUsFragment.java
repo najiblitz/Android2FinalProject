@@ -1,11 +1,14 @@
 package com.example.android2finalproject;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -96,13 +99,30 @@ public class AboutUsFragment extends Fragment {
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-
-                convertView = LayoutInflater.from(getContext()).inflate(R.layout.listview_about_us, parent,false);
+           SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+           boolean sizeOption = sharedPrefs.getBoolean("textSize", false);
+           String colorChoice = sharedPrefs.getString("textColor", "Black");
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.listview_about_us, parent,false);
                 TextView question = convertView.findViewById(R.id.question);
                 question.setText(getItem(position).getQuestion());
                 TextView answer = convertView.findViewById(R.id.answer);
                 answer.setText(getItem(position).getAnswer());
 
+                if (sizeOption) {
+                    question.setTextSize(40);
+                    answer.setTextSize(40);
+                } else {
+                    question.setTextSize(30);
+                    answer.setTextSize(30);
+                }
+
+            switch (colorChoice) {
+                case "Black":
+                    question.setTextColor(Color.BLACK);
+            break;
+                case "Pink":
+                    break;
+                }
 
             return convertView;
 
