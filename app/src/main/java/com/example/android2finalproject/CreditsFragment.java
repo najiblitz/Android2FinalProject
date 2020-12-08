@@ -1,12 +1,16 @@
 package com.example.android2finalproject;
 
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +63,29 @@ public class CreditsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_credits, container, false);
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        boolean sizeOption = sharedPrefs.getBoolean("textSize", false);
+        String colorChoice = sharedPrefs.getString("textColor", "Black");
+        View view =inflater.inflate(R.layout.fragment_credits, container, false);
+        TextView creditContent = view.findViewById(R.id.creditContent);
+
+        if (sizeOption) {
+            creditContent.setTextSize(40);
+        } else {
+            creditContent.setTextSize(25);
+        }
+
+        switch (colorChoice) {
+            case "Black":
+                creditContent.setTextColor(Color.BLACK);
+                break;
+            case "Pink":
+                creditContent.setTextColor(getResources().getColor(R.color.pinkText));
+                break;
+            case "Blue":
+                creditContent.setTextColor(getResources().getColor(R.color.darkText));
+                break;
+        }
+        return view;
     }
 }

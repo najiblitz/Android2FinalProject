@@ -112,17 +112,24 @@ public class AboutUsFragment extends Fragment {
                     question.setTextSize(40);
                     answer.setTextSize(40);
                 } else {
-                    question.setTextSize(30);
-                    answer.setTextSize(30);
+                    question.setTextSize(25);
+                    answer.setTextSize(25);
                 }
 
             switch (colorChoice) {
                 case "Black":
                     question.setTextColor(Color.BLACK);
-            break;
-                case "Pink":
+                    answer.setTextColor(Color.BLACK);
                     break;
-                }
+                case "Pink":
+                    question.setTextColor(getResources().getColor(R.color.pinkText));
+                    answer.setTextColor(getResources().getColor(R.color.pinkText));
+                    break;
+                case "Blue":
+                    question.setTextColor(getResources().getColor(R.color.darkText));
+                    answer.setTextColor(getResources().getColor(R.color.darkText));
+                    break;
+            }
 
             return convertView;
 
