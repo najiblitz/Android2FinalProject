@@ -1,17 +1,22 @@
 package com.example.android2finalproject;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -67,7 +72,11 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        boolean sizeOption = sharedPrefs.getBoolean("buttonSize", false);
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
+
         ImageButton emailButton = view.findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -169,6 +178,39 @@ public class ContactFragment extends Fragment {
                 }
             }
         });
+
+        if (sizeOption) {
+            phoneButton.setMaxHeight(175);
+            phoneButton.setMaxWidth(125);
+            emailButton.setMaxHeight(175);
+            emailButton.setMaxWidth(125);
+            websiteButton.setMaxHeight(175);
+            websiteButton.setMaxWidth(125);
+            locationButton.setMaxHeight(185);
+            locationButton.setMaxWidth(125);
+            instagramButton.setMaxHeight(185);
+            instagramButton.setMaxWidth(125);
+            shareButton.setMaxHeight(100);
+            shareButton.setMaxWidth(125);
+            facebookButton.setMaxHeight(205);
+            facebookButton.setMaxWidth(125);
+        } else {
+            phoneButton.setMaxHeight(125);
+            phoneButton.setMaxWidth(75);
+            emailButton.setMaxHeight(125);
+            emailButton.setMaxWidth(75);
+            websiteButton.setMaxHeight(125);
+            websiteButton.setMaxWidth(75);
+            locationButton.setMaxHeight(135);
+            locationButton.setMaxWidth(75);
+            instagramButton.setMaxHeight(135);
+            instagramButton.setMaxWidth(75);
+            shareButton.setMaxHeight(165);
+            shareButton.setMaxWidth(75);
+            facebookButton.setMaxHeight(155);
+            facebookButton.setMaxWidth(75);
+
+        }
 
         return view;
     }

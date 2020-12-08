@@ -19,10 +19,10 @@
     // Home
 
     <string name="home_title">Phone</string>
-    <string name="home_intro">Welcome to Vince\'s Vintage Finds! We are so glad you\'ve discovered our app! \n \n
-        Everyday we are adding new Products which you can find featured in our store! Head over to our Deals Section to
-        find out about new promotions and sales coming up! We cannot wait to see you, and we hope we can satisfy all your
-        vintage needs!</string>
+    <string name="home_intro">Welcome to Vince\'s Vintage Finds. We are so glad you\'ve discovered our app. \n \n
+        Everyday we are adding new Products which you can find featured in our store. Head over to our Deals Section to
+        find out about new promotions and sales coming up. We cannot wait to see you, and we hope we can satisfy all your
+        vintage needs.</string>
 
     // Contact
 
@@ -43,15 +43,11 @@
     <string name="question3">Who is Vince?</string>
     <string name="answer3">When Sam(owner of Vince\'s) was younger, she volunteered at a retirement home doing social activities with the residents. This is where Same met Vince. At the time, Vince was a 93 year old man who had spent his life working in a hobby shop. One thing that made Vince stand out was his fashion. He always had every piece of his outfit very thought out, and everything, even down to his socks matched perfect. He wore a lot of clothing he had from when he was younger. Much of his clothing was from around the 1940s. Since his clothes were so old, they weren\'t in the best condition. Sam decided to buy Vince a new outfit, and so she was off to search. This is when Sam first fell in love with vintage styles.</string>
     <string name="question4">How do we find what we sell?</string>
-    <string name="answer4">Everyday we have employees out looking for new finds! We search yard sales, online, community sale pages and more! Not only to we actively search, we also are always looking to buy items off our customers. Have something you no longer wear and want to change it for something new? Bring it in and we will work with you on an offer so we end up with a new find and you end up with a new look!</string>
+    <string name="answer4">Everyday we have employees out looking for new finds! We search yard sales, online, community sale pages and more. Not only to we actively search, we also are always looking to buy items off our customers. Have something you no longer wear and want to change it for something new? Bring it in and we will work with you on an offer so we end up with a new find and you end up with a new look.</string>
     <string name="question5">What are our hours?</string>
     <string name="answer5">We are open Monday through Saturday from 9am-8pm, and Sundays 11am-4pm</string>
     <string name="question6">What are we doing to keep up with Covid?</string>
-    <string name="answer6">Here at Vince\'s we take all Covid regulations set by our government seriously. We ask that while you are in our store, you please where a mask and keep up with social distancing protocols. We also have sanitizer available throughout the store. As a precaution though, for the time being, our dressing rooms will be closed!</string>
-
-    // Deals
-
-    // New Products
+    <string name="answer6">Here at Vince\'s we take all Covid regulations set by our government seriously. We ask that while you are in our store, you please where a mask and keep up with social distancing protocols. We also have sanitizer available throughout the store. As a precaution though, for the time being, our dressing rooms will be closed.</string>
 
     // Settings
 
@@ -63,22 +59,22 @@
     // Pictures Used
     <string name="womens_clothing">Image by <a href="https://pixabay.com/users/counselling-440107/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=483833">Ulrike Mai</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=483833">Pixabay</a></string>
 
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+<!--    -->
+<!--    &lt;!&ndash; Preference Titles &ndash;&gt;-->
+<!--    <string name="messages_header">Messages</string>-->
+<!--    <string name="sync_header">Sync</string>-->
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
+<!--    &lt;!&ndash; Messages Preferences &ndash;&gt;-->
+<!--    <string name="signature_title">Your signature</string>-->
+<!--    <string name="reply_title">Default reply action</string>-->
 
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="title_activity_settings">SettingsActivity</string>
+<!--    &lt;!&ndash; Sync Preferences &ndash;&gt;-->
+<!--    <string name="sync_title">Sync email periodically</string>-->
+<!--    <string name="attachment_title">Download incoming attachments</string>-->
+<!--    <string name="attachment_summary_on">Automatically download attachments for incoming emails-->
+<!--    </string>-->
+<!--    <string name="attachment_summary_off">Only download attachments when manually requested</string>-->
+<!--    <string name="title_activity_settings">SettingsActivity</string>-->
 </resources>

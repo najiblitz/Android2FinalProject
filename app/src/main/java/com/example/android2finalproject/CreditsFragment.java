@@ -85,6 +85,9 @@ public class CreditsFragment extends Fragment {
             case "Blue":
                 creditContent.setTextColor(getResources().getColor(R.color.darkText));
                 break;
+            case "Default":
+                creditContent.setTextColor(getResources().getColor(R.color.darkText));
+                break;
         }
         return view;
     }

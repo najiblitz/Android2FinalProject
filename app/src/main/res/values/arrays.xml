@@ -9,6 +9,7 @@
         <item>Black</item>
         <item>Pink</item>
         <item>Blue</item>
+        <item>Default</item>
     </string-array>
 
     <string-array name="button_sizes">

@@ -84,7 +84,12 @@ public class HomeFragment extends Fragment {
             case "Blue":
                 homeContent.setTextColor(getResources().getColor(R.color.darkText));
                 break;
+            case "Default":
+                homeContent.setTextColor(getResources().getColor(R.color.darkText));
+                break;
         }
+
+
 
         return view;
     }

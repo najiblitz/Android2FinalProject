@@ -129,6 +129,10 @@ public class AboutUsFragment extends Fragment {
                     question.setTextColor(getResources().getColor(R.color.darkText));
                     answer.setTextColor(getResources().getColor(R.color.darkText));
                     break;
+                case "Default":
+                    question.setTextColor(getResources().getColor(R.color.pinkText));
+                    answer.setTextColor(getResources().getColor(R.color.darkText));
+                    break;
             }
 
             return convertView;

@@ -26,80 +26,87 @@
 
             <ImageButton
                 android:id="@+id/phoneButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_weight="0"
                 android:adjustViewBounds="true"
                 android:background="@color/colorAccent"
+                android:scaleType="fitXY"
                 android:src="@drawable/phone" />
 
             <ImageButton
                 android:id="@+id/emailButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_weight="0"
                 android:adjustViewBounds="true"
                 android:background="@color/colorAccent"
+                android:scaleType="fitXY"
                 android:src="@drawable/email" />
 
             <ImageButton
                 android:id="@+id/websiteButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_weight="0"
                 android:adjustViewBounds="true"
                 android:background="@color/colorAccent"
+                android:scaleType="fitXY"
                 android:src="@drawable/website" />
 
             <ImageButton
                 android:id="@+id/locationButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="135dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_weight="0"
                 android:adjustViewBounds="true"
                 android:background="@color/colorAccent"
+                android:scaleType="fitXY"
                 android:src="@drawable/location" />
 
             <ImageButton
                 android:id="@+id/instagramButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="135dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_weight="0"
                 android:adjustViewBounds="true"
                 android:background="@color/colorAccent"
+                android:scaleType="fitXY"
                 android:src="@drawable/instagram" />
 
             <ImageButton
                 android:id="@+id/shareButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="165dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_weight="0"
                 android:adjustViewBounds="true"
                 android:background="@color/colorAccent"
+                android:scaleType="fitXY"
                 android:src="@drawable/sharewebsite" />
 
             <ImageButton
                 android:id="@+id/facebookButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="155dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0"
                 android:adjustViewBounds="true"
                 android:background="@color/colorAccent"
-                android:src="@drawable/phone" />
+                android:scaleType="fitXY"
+                android:src="@drawable/facebook" />
         </LinearLayout>
     </ScrollView>
 

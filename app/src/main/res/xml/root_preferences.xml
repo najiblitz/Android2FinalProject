@@ -7,14 +7,14 @@
         android:entries="@array/font_color"
         android:entryValues="@array/font_color"
         android:key="textColor"
-        android:title="List preference" />
+        android:title="Select Text Color" />
     <SwitchPreference
         android:defaultValue="false"
         android:key="textSize"
-        android:title="Enlarge Text" />
+        android:title="Large Text" />
     <SwitchPreference
         android:defaultValue="false"
         android:key="buttonSize"
-        android:title="Enlarge Buttons" />
+        android:title="Large Buttons" />
 
 </PreferenceScreen>
