@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -180,36 +181,21 @@ public class ContactFragment extends Fragment {
         });
 
         if (sizeOption) {
-            phoneButton.setMaxHeight(175);
-            phoneButton.setMaxWidth(125);
-            emailButton.setMaxHeight(175);
-            emailButton.setMaxWidth(125);
-            websiteButton.setMaxHeight(175);
-            websiteButton.setMaxWidth(125);
-            locationButton.setMaxHeight(185);
-            locationButton.setMaxWidth(125);
-            instagramButton.setMaxHeight(185);
-            instagramButton.setMaxWidth(125);
-            shareButton.setMaxHeight(100);
-            shareButton.setMaxWidth(125);
-            facebookButton.setMaxHeight(205);
-            facebookButton.setMaxWidth(125);
+            phoneButton.setLayoutParams(new LinearLayout.LayoutParams(175,125));
+            emailButton.setLayoutParams(new LinearLayout.LayoutParams(175,125));
+            websiteButton.setLayoutParams(new LinearLayout.LayoutParams(175,125));
+            locationButton.setLayoutParams(new LinearLayout.LayoutParams(185,125));
+            instagramButton.setLayoutParams(new LinearLayout.LayoutParams(185,125));
+            shareButton.setLayoutParams(new LinearLayout.LayoutParams(215,125));
+            facebookButton.setLayoutParams(new LinearLayout.LayoutParams(175,125));
         } else {
-            phoneButton.setMaxHeight(125);
-            phoneButton.setMaxWidth(75);
-            emailButton.setMaxHeight(125);
-            emailButton.setMaxWidth(75);
-            websiteButton.setMaxHeight(125);
-            websiteButton.setMaxWidth(75);
-            locationButton.setMaxHeight(135);
-            locationButton.setMaxWidth(75);
-            instagramButton.setMaxHeight(135);
-            instagramButton.setMaxWidth(75);
-            shareButton.setMaxHeight(165);
-            shareButton.setMaxWidth(75);
-            facebookButton.setMaxHeight(155);
-            facebookButton.setMaxWidth(75);
-
+            phoneButton.setLayoutParams(new LinearLayout.LayoutParams(125,75));
+            emailButton.setLayoutParams(new LinearLayout.LayoutParams(125,75));
+            websiteButton.setLayoutParams(new LinearLayout.LayoutParams(125,75));
+            locationButton.setLayoutParams(new LinearLayout.LayoutParams(135,75));
+            instagramButton.setLayoutParams(new LinearLayout.LayoutParams(135,75));
+            shareButton.setLayoutParams(new LinearLayout.LayoutParams(165,75));
+            facebookButton.setLayoutParams(new LinearLayout.LayoutParams(125,75));
         }
 
         return view;

@@ -14,7 +14,7 @@
     <string name="menu_deals">Deals</string>
     <string name="menu_contact">Contact Us</string>
     <string name="menu_aboutUs">About Us</string>
-    <string name="menu_settings">Settings</string>
+    <string name="menu_discount">In Store Bonus</string>
 
     // Home
 
@@ -49,11 +49,15 @@
     <string name="question6">What are we doing to keep up with Covid?</string>
     <string name="answer6">Here at Vince\'s we take all Covid regulations set by our government seriously. We ask that while you are in our store, you please where a mask and keep up with social distancing protocols. We also have sanitizer available throughout the store. As a precaution though, for the time being, our dressing rooms will be closed.</string>
 
-    // Settings
+    // Discount
 
-    <string name="creditsTitle">Credits</string>
+    <string name="discountTitle">In Our Store Shopping?</string>
+    <string name="discountContent">Once at Checkout, take your chance at receiving a discount or other bonus by pressing \'Lets Go\'</string>
+    <string name="discountButton">Let\'s Go</string>
+
     // Credits
 
+    <string name="creditsTitle">Credits</string>
     <string name="creditContent">CREDITS GO HERE</string>
 
     // Pictures Used
@@ -61,20 +65,20 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-<!--    -->
-<!--    &lt;!&ndash; Preference Titles &ndash;&gt;-->
-<!--    <string name="messages_header">Messages</string>-->
-<!--    <string name="sync_header">Sync</string>-->
 
-<!--    &lt;!&ndash; Messages Preferences &ndash;&gt;-->
-<!--    <string name="signature_title">Your signature</string>-->
-<!--    <string name="reply_title">Default reply action</string>-->
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
 
-<!--    &lt;!&ndash; Sync Preferences &ndash;&gt;-->
-<!--    <string name="sync_title">Sync email periodically</string>-->
-<!--    <string name="attachment_title">Download incoming attachments</string>-->
-<!--    <string name="attachment_summary_on">Automatically download attachments for incoming emails-->
-<!--    </string>-->
-<!--    <string name="attachment_summary_off">Only download attachments when manually requested</string>-->
-<!--    <string name="title_activity_settings">SettingsActivity</string>-->
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_settings">SettingsActivity</string>
 </resources>

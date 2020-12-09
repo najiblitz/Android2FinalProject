@@ -35,5 +35,10 @@
         android:name="com.example.android2finalproject.CreditsFragment"
         android:label="@string/creditsTitle"
         tools:layout="@layout/fragment_credits" />
+    <fragment
+        android:id="@+id/nav_discount"
+        android:name="com.example.android2finalproject.DiscountFragment"
+        android:label="fragment_discount"
+        tools:layout="@layout/fragment_discount" />
 
 </navigation>

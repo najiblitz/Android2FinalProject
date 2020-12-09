@@ -1,8 +1,11 @@
 package com.example.android2finalproject;
 
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -67,17 +70,56 @@ public class ViewPagerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        boolean sizeOption = sharedPrefs.getBoolean("textSize", false);
+        String colorChoice = sharedPrefs.getString("textColor", "Black");
         View view = inflater.inflate(R.layout.fragment_view_pager, container, false);
+        TextView title = view.findViewById(R.id.newTitle);
+        ImageView picture = view.findViewById(R.id.image);
+        TextView size = view.findViewById(R.id.newSize);
+        TextView price = view.findViewById(R.id.newPrice);
+
         if (mParam1 != null && mParam2 != 0 && mParam3 != null && mParam4 != null) {
-            TextView title = view.findViewById(R.id.newTitle);
             title.setText(mParam1);
-            ImageView picture = view.findViewById(R.id.image);
             picture.setImageResource(mParam2);
-            TextView size = view.findViewById(R.id.newSize);
             size.setText("Size: " + mParam3);
-            TextView price = view.findViewById(R.id.newPrice);
             price.setText("Price: " + mParam4);
         }
+
+        if (sizeOption) {
+            title.setTextSize(40);
+            size.setTextSize(40);
+            price.setTextSize(40);
+        } else {
+            title.setTextSize(25);
+            size.setTextSize(25);
+            price.setTextSize(25);
+        }
+
+        switch (colorChoice) {
+            case "Black":
+                title.setTextColor(Color.BLACK);
+                size.setTextColor(Color.BLACK);
+                price.setTextColor(Color.BLACK);
+                break;
+            case "Pink":
+                title.setTextColor(getResources().getColor(R.color.pinkText));
+                size.setTextColor(getResources().getColor(R.color.pinkText));
+                price.setTextColor(getResources().getColor(R.color.pinkText));
+                break;
+            case "Blue":
+                title.setTextColor(getResources().getColor(R.color.darkText));
+                size.setTextColor(getResources().getColor(R.color.darkText));
+                price.setTextColor(getResources().getColor(R.color.darkText));
+                break;
+            case "Default":
+                title.setTextColor(getResources().getColor(R.color.pinkText));
+                size.setTextColor(getResources().getColor(R.color.darkText));
+                price.setTextColor(getResources().getColor(R.color.darkText));
+                break;
+        }
+
+
         return view;
     }
 }
