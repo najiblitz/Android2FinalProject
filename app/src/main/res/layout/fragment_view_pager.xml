@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     android:orientation="vertical"
-    tools:context=".ViewPagerFragment">
+    tools:context=".WhatsNewViewPagerFragment">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="282dp"
-        android:background="@color/darkText"
+        android:background="@color/colorAccent"
         tools:src="@drawable/dress" />
 
     <ScrollView

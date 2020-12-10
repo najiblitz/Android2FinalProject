@@ -72,7 +72,7 @@ public class DiscountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment\
-        int[] images = {R.drawable.holiday,R.drawable.jewellery,R.drawable.jacket,R.drawable.throwback};
+
         View view = inflater.inflate(R.layout.fragment_discount, container, false);
 
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
@@ -84,7 +84,7 @@ public class DiscountFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewPager.setCurrentItem(4, true);
+                viewPager.setCurrentItem(11, true);
             }
         });
 
@@ -93,8 +93,7 @@ public class DiscountFragment extends Fragment {
 
     public class CustomViewPagerAdapter extends FragmentPagerAdapter {
 
-        ArrayList<Integer> images = new ArrayList<>(Arrays.asList(R.drawable.holiday,R.drawable.jewellery,R.drawable.jacket,R.drawable.throwback));
-
+        ArrayList<Integer> images = new ArrayList<>(Arrays.asList(R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tenoff,R.drawable.fifteenoff,R.drawable.twentyoff,R.drawable.twentyfiveoff,R.drawable.fiveoff,R.drawable.gift));
 
         public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
             super(fm);

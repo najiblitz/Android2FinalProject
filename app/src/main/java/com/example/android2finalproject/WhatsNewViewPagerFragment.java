@@ -15,10 +15,10 @@ import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ViewPagerFragment#newInstance} factory method to
+ * Use the {@link WhatsNewViewPagerFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ViewPagerFragment extends Fragment {
+public class WhatsNewViewPagerFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,7 +33,7 @@ public class ViewPagerFragment extends Fragment {
     private String mParam3;
     private String mParam4;
 
-    public ViewPagerFragment() {
+    public WhatsNewViewPagerFragment() {
         // Required empty public constructor
     }
 
@@ -45,8 +45,8 @@ public class ViewPagerFragment extends Fragment {
      * @return A new instance of fragment WhatsNewFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ViewPagerFragment newInstance(String param1, int param2, String param3, String param4) {
-        ViewPagerFragment fragment = new ViewPagerFragment();
+    public static WhatsNewViewPagerFragment newInstance(String param1, int param2, String param3, String param4) {
+        WhatsNewViewPagerFragment fragment = new WhatsNewViewPagerFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putInt(ARG_PARAM2, param2);

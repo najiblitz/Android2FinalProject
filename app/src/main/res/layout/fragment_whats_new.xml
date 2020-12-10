@@ -14,7 +14,7 @@
         android:src="@drawable/whatsnew" />
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/newContent"
+        android:id="@+id/whatsNewViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

@@ -39,16 +39,6 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/homeLogo"
-                android:layout_width="100dp"
-                android:paddingTop="15dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_menu_camera"
-                tools:src="@drawable/ic_launcher_background" />
-
-            <ImageView
                 android:id="@+id/homeBottomImage"
                 android:layout_width="match_parent"
                 android:layout_height="62dp"

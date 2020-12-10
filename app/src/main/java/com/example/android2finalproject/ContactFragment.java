@@ -15,6 +15,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -79,7 +81,7 @@ public class ContactFragment extends Fragment {
         boolean sizeOption = sharedPrefs.getBoolean("buttonSize", false);
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
-        ImageButton emailButton = view.findViewById(R.id.emailButton);
+        final ImageButton emailButton = view.findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -183,27 +185,35 @@ public class ContactFragment extends Fragment {
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(475,425);
         LinearLayout.LayoutParams largerParams = new LinearLayout.LayoutParams(500,425);
-        LinearLayout.LayoutParams smallParams = new LinearLayout.LayoutParams(275,225);
+        LinearLayout.LayoutParams smallParams = new LinearLayout.LayoutParams(300,250);
+        LinearLayout.LayoutParams smallLargeParams = new LinearLayout.LayoutParams(340,250);
+        LinearLayout.LayoutParams shareSmall = new LinearLayout.LayoutParams(400,250);
+        LinearLayout.LayoutParams shareLarge = new LinearLayout.LayoutParams(570,425);
+
+
         params.gravity = Gravity.CENTER;
         largerParams.gravity = Gravity.CENTER;
         smallParams.gravity = Gravity.CENTER;
+        smallLargeParams.gravity = Gravity.CENTER;
+        shareLarge.gravity = Gravity.CENTER;
+        shareSmall.gravity = Gravity.CENTER;
 
         if (sizeOption) {
             phoneButton.setLayoutParams(params);
             emailButton.setLayoutParams(params);
             websiteButton.setLayoutParams(params);
-            locationButton.setLayoutParams(params);
+            locationButton.setLayoutParams(largerParams);
             instagramButton.setLayoutParams(largerParams);
-            shareButton.setLayoutParams(largerParams);
+            shareButton.setLayoutParams(shareLarge);
             facebookButton.setLayoutParams(largerParams);
         } else {
             phoneButton.setLayoutParams(smallParams);
             emailButton.setLayoutParams(smallParams);
             websiteButton.setLayoutParams(smallParams);
-            locationButton.setLayoutParams(smallParams);
-            instagramButton.setLayoutParams(smallParams);
-            shareButton.setLayoutParams(smallParams);
-            facebookButton.setLayoutParams(smallParams);
+            locationButton.setLayoutParams(smallLargeParams);
+            instagramButton.setLayoutParams(smallLargeParams);
+            shareButton.setLayoutParams(shareSmall);
+            facebookButton.setLayoutParams(smallLargeParams);
         }
 
         return view;

@@ -59,7 +59,7 @@ public class WhatsNewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_whats_new, container, false);
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
-        ViewPager viewPager = view.findViewById(R.id.newContent);
+        ViewPager viewPager = view.findViewById(R.id.whatsNewViewPager);
         viewPager.setAdapter(adapter);
         return view;
     }
@@ -77,30 +77,30 @@ public class WhatsNewFragment extends Fragment {
 
             switch (position) {
                 case 0:
-                    return ViewPagerFragment.newInstance("1990's Toronto Blue Jays Jersey", R.drawable.jays,"Medium","$20");
+                    return WhatsNewViewPagerFragment.newInstance("1990's Toronto Blue Jays Jersey", R.drawable.jays,"Medium","$20");
                 case 1:
-                    return ViewPagerFragment.newInstance("1980's Faux Fur Jacket", R.drawable.fur1,"Large","$45");
+                    return WhatsNewViewPagerFragment.newInstance("1980's Faux Fur Jacket", R.drawable.fur1,"Large","$45");
                 case 2:
-                    return ViewPagerFragment.newInstance("1990's Multi-Colour Sequin Jacket", R.drawable.rainbow,"Large", "$30");
+                    return WhatsNewViewPagerFragment.newInstance("1990's Multi-Colour Sequin Jacket", R.drawable.rainbow,"Large", "$30");
                 case 3:
-                    return ViewPagerFragment.newInstance("1960's Children's Dress", R.drawable.baby,"12-18 Months", "$10");
+                    return WhatsNewViewPagerFragment.newInstance("1960's Children's Dress", R.drawable.baby,"12-18 Months", "$10");
                 case 4:
-                    return ViewPagerFragment.newInstance("1980's Miami Dolphins Sweatshirt", R.drawable.dolphins,"Medium", "$10");
+                    return WhatsNewViewPagerFragment.newInstance("1980's Miami Dolphins Sweatshirt", R.drawable.dolphins,"Medium", "$10");
                 case 5:
-                    return ViewPagerFragment.newInstance("1980's Men's Levi Jean Jacket", R.drawable.levi,"Large", "$30");
+                    return WhatsNewViewPagerFragment.newInstance("1980's Men's Levi Jean Jacket", R.drawable.levi,"Large", "$30");
                 case 6:
-                    return ViewPagerFragment.newInstance("1970's Fur Jacket", R.drawable.fur2,"Large", "$110");
+                    return WhatsNewViewPagerFragment.newInstance("1970's Fur Jacket", R.drawable.fur2,"Large", "$110");
                 case 7:
-                    return ViewPagerFragment.newInstance("1990's Nautica Jacket", R.drawable.nautica,"XX-Large", "$10");
+                    return WhatsNewViewPagerFragment.newInstance("1990's Nautica Jacket", R.drawable.nautica,"XX-Large", "$10");
                 case 8:
-                    return ViewPagerFragment.newInstance("1960's Flower Girl Dress", R.drawable.dress,"Small", "$15");
+                    return WhatsNewViewPagerFragment.newInstance("1960's Flower Girl Dress", R.drawable.dress,"Small", "$15");
                 case 9:
-                    return ViewPagerFragment.newInstance("1990's Wutang Sweatshirt", R.drawable.wutang,"X-Large", "$25");
+                    return WhatsNewViewPagerFragment.newInstance("1990's Wutang Sweatshirt", R.drawable.wutang,"X-Large", "$25");
                 case 10:
-                    return ViewPagerFragment.newInstance("1980's Wedding Dress", R.drawable.wedding,"Small", "$45");
+                    return WhatsNewViewPagerFragment.newInstance("1980's Wedding Dress", R.drawable.wedding,"Small", "$45");
                 case 11:
-                    return ViewPagerFragment.newInstance("1990's Throwback Kobe LA Jersey", R.drawable.bryant,"X-Large", "$20");
-                default: return ViewPagerFragment.newInstance("404 Not Found",R.drawable.holiday, "404 Error Found", "404 Error Found");
+                    return WhatsNewViewPagerFragment.newInstance("1990's Throwback Kobe LA Jersey", R.drawable.bryant,"X-Large", "$20");
+                default: return WhatsNewViewPagerFragment.newInstance("404 Not Found",R.drawable.holiday, "404 Error Found", "404 Error Found");
             }
         }
 
