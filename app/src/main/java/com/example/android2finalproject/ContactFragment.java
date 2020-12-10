@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.preference.PreferenceManager;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -180,22 +181,29 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(475,425);
+        LinearLayout.LayoutParams largerParams = new LinearLayout.LayoutParams(500,425);
+        LinearLayout.LayoutParams smallParams = new LinearLayout.LayoutParams(275,225);
+        params.gravity = Gravity.CENTER;
+        largerParams.gravity = Gravity.CENTER;
+        smallParams.gravity = Gravity.CENTER;
+
         if (sizeOption) {
-            phoneButton.setLayoutParams(new LinearLayout.LayoutParams(175,125));
-            emailButton.setLayoutParams(new LinearLayout.LayoutParams(175,125));
-            websiteButton.setLayoutParams(new LinearLayout.LayoutParams(175,125));
-            locationButton.setLayoutParams(new LinearLayout.LayoutParams(185,125));
-            instagramButton.setLayoutParams(new LinearLayout.LayoutParams(185,125));
-            shareButton.setLayoutParams(new LinearLayout.LayoutParams(215,125));
-            facebookButton.setLayoutParams(new LinearLayout.LayoutParams(175,125));
+            phoneButton.setLayoutParams(params);
+            emailButton.setLayoutParams(params);
+            websiteButton.setLayoutParams(params);
+            locationButton.setLayoutParams(params);
+            instagramButton.setLayoutParams(largerParams);
+            shareButton.setLayoutParams(largerParams);
+            facebookButton.setLayoutParams(largerParams);
         } else {
-            phoneButton.setLayoutParams(new LinearLayout.LayoutParams(125,75));
-            emailButton.setLayoutParams(new LinearLayout.LayoutParams(125,75));
-            websiteButton.setLayoutParams(new LinearLayout.LayoutParams(125,75));
-            locationButton.setLayoutParams(new LinearLayout.LayoutParams(135,75));
-            instagramButton.setLayoutParams(new LinearLayout.LayoutParams(135,75));
-            shareButton.setLayoutParams(new LinearLayout.LayoutParams(165,75));
-            facebookButton.setLayoutParams(new LinearLayout.LayoutParams(125,75));
+            phoneButton.setLayoutParams(smallParams);
+            emailButton.setLayoutParams(smallParams);
+            websiteButton.setLayoutParams(smallParams);
+            locationButton.setLayoutParams(smallParams);
+            instagramButton.setLayoutParams(smallParams);
+            shareButton.setLayoutParams(smallParams);
+            facebookButton.setLayoutParams(smallParams);
         }
 
         return view;

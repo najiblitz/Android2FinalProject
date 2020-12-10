@@ -7,7 +7,6 @@
     android:background="@color/colorAccent"
     tools:context=".DiscountFragment">
 
-
     <TextView
         android:id="@+id/discountTitle"
         android:layout_width="match_parent"
@@ -30,14 +29,10 @@
         android:textColor="@color/darkText"
         android:text="@string/discountContent" />
 
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:background="@android:color/black"
-        android:src="@drawable/holiday" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/discountViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <ImageButton
         android:id="@+id/letsGoButton"
@@ -45,6 +40,5 @@
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:src="@drawable/letsgo" />
-
 
 </LinearLayout>

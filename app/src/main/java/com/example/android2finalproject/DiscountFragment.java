@@ -2,11 +2,23 @@ package com.example.android2finalproject;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +31,7 @@ public class DiscountFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -58,7 +71,46 @@ public class DiscountFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_discount, container, false);
+        // Inflate the layout for this fragment\
+        int[] images = {R.drawable.holiday,R.drawable.jewellery,R.drawable.jacket,R.drawable.throwback};
+        View view = inflater.inflate(R.layout.fragment_discount, container, false);
+
+        CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
+        final ViewPager viewPager = view.findViewById(R.id.discountViewPager);
+        viewPager.setAdapter(adapter);
+        viewPager.setEnabled(false);
+
+        AppCompatImageButton button = view.findViewById(R.id.letsGoButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(4, true);
+            }
+        });
+
+        return view;
+    }
+
+    public class CustomViewPagerAdapter extends FragmentPagerAdapter {
+
+        ArrayList<Integer> images = new ArrayList<>(Arrays.asList(R.drawable.holiday,R.drawable.jewellery,R.drawable.jacket,R.drawable.throwback));
+
+
+        public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
+            super(fm);
+            Collections.shuffle(images);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+           return DiscountViewPagerFragment.newInstance(images.get(position));
+        }
+
+
+        @Override
+        public int getCount() {
+            return images.size();
+        }
     }
 }
