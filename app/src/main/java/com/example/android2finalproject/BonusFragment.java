@@ -60,9 +60,6 @@ public class BonusFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-    int[] images = new int[]{R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tenoff,R.drawable.fifteenoff,R.drawable.twentyoff,R.drawable.twentyfiveoff,R.drawable.fiveoff,R.drawable.gift};
-    Random random = new Random(images.length);
-    int newImage = random.nextInt();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,15 +71,12 @@ public class BonusFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                int[] images = new int[]{R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tenoff,R.drawable.fifteenoff,R.drawable.twentyoff,R.drawable.twentyfiveoff,R.drawable.fiveoff,R.drawable.gift};
 
-//                ArrayList<Integer> images = new ArrayList<>(Arrays.asList(R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tenoff,R.drawable.fifteenoff,R.drawable.twentyoff,R.drawable.twentyfiveoff,R.drawable.fiveoff,R.drawable.gift));
-//                Collections.shuffle(images);
-//                Random random = new Random(images.size());
-//                Random random = new Random(images.length);
-//                int newImage = images.indexOf(random);
-//                int newImage = random.nextInt();
-                button.setImageResource(newImage);
+                ArrayList<Integer> images = new ArrayList<>(Arrays.asList(R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tenoff,R.drawable.fifteenoff,R.drawable.twentyoff,R.drawable.twentyfiveoff,R.drawable.fiveoff,R.drawable.gift));
+                Collections.shuffle(images);
+
+                button.setImageResource(images.get(0));
+                button.setEnabled(false);
             }
         });
 

@@ -82,6 +82,7 @@ public class ContactFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
         final ImageButton emailButton = view.findViewById(R.id.emailButton);
+        emailButton.startAnimation(R.anim.slide_in);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
