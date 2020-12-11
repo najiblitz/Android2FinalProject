@@ -2,13 +2,10 @@ package com.example.android2finalproject;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 import androidx.preference.PreferenceManager;
 
 import android.view.Gravity;
@@ -17,9 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -81,8 +76,12 @@ public class ContactFragment extends Fragment {
         boolean sizeOption = sharedPrefs.getBoolean("buttonSize", false);
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
+        Animation animationShort = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in_short);
+        Animation animationMedium = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in_short);
+        Animation animationLong = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in_short);
+
         final ImageButton emailButton = view.findViewById(R.id.emailButton);
-        emailButton.startAnimation(R.anim.slide_in);
+        emailButton.startAnimation(animationShort);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +99,7 @@ public class ContactFragment extends Fragment {
         });
 
         ImageButton locationButton = view.findViewById(R.id.locationButton);
+        locationButton.startAnimation(animationMedium);
         locationButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -114,6 +114,7 @@ public class ContactFragment extends Fragment {
         });
 
         ImageButton instagramButton = view.findViewById(R.id.instagramButton);
+        instagramButton.startAnimation(animationMedium);
         instagramButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,6 +129,7 @@ public class ContactFragment extends Fragment {
         });
 
         ImageButton phoneButton = view.findViewById(R.id.phoneButton);
+        phoneButton.startAnimation(animationShort);
         phoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,6 +144,7 @@ public class ContactFragment extends Fragment {
         });
 
         ImageButton websiteButton = view.findViewById(R.id.websiteButton);
+        websiteButton.startAnimation(animationMedium);
         websiteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,6 +159,7 @@ public class ContactFragment extends Fragment {
         });
 
         ImageButton shareButton = view.findViewById(R.id.shareButton);
+        shareButton.startAnimation(animationLong);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -172,6 +176,7 @@ public class ContactFragment extends Fragment {
         });
 
         ImageButton facebookButton = view.findViewById(R.id.facebookButton);
+        facebookButton.startAnimation(animationLong);
         facebookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
