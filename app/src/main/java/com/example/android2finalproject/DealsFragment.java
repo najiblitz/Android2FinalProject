@@ -65,7 +65,12 @@ public class DealsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_deals, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycler);
+
+        // Create ArrayList to store deal images
+
         ArrayList<Deals> deals = new ArrayList<>();
+
+        // Add images to ArrayList
 
         deals.add(new Deals(R.drawable.jewellery));
         deals.add(new Deals(R.drawable.jacket));

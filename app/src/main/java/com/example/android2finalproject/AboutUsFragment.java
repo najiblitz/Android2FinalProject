@@ -79,6 +79,8 @@ public class AboutUsFragment extends Fragment {
         answer = view.findViewById(R.id.answer);
         ArrayList<AboutUsInfo> aboutUsInfoArrayList = new ArrayList<>();
 
+        // Add content to be displayed in ListView
+
         aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question1), "" + getResources().getString(R.string.answer1)));
         aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question2), "" + getResources().getString(R.string.answer2)));
         aboutUsInfoArrayList.add(new AboutUsInfo("" + getResources().getString(R.string.question3), "" + getResources().getString(R.string.answer3)));
@@ -107,6 +109,8 @@ public class AboutUsFragment extends Fragment {
                 question.setText(getItem(position).getQuestion());
                 TextView answer = convertView.findViewById(R.id.answer);
                 answer.setText(getItem(position).getAnswer());
+
+                // Add Settings used
 
                 if (sizeOption) {
                     question.setTextSize(40);

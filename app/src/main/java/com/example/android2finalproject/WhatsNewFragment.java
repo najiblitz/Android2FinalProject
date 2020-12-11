@@ -64,6 +64,8 @@ public class WhatsNewFragment extends Fragment {
         return view;
     }
 
+    // Create CustomViewPagerAdapter
+
     public class CustomViewPagerAdapter extends FragmentPagerAdapter {
 
 
@@ -74,6 +76,8 @@ public class WhatsNewFragment extends Fragment {
         @NonNull
         @Override
         public Fragment getItem(int position) {
+
+            // Add Content to Viewpager
 
             switch (position) {
                 case 0:

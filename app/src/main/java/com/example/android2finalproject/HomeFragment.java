@@ -64,10 +64,14 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        // Add Settings used
+
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         boolean sizeOption = sharedPrefs.getBoolean("textSize", false);
         String colorChoice = sharedPrefs.getString("textColor", "Black");
         TextView homeContent = view.findViewById(R.id.homeIntro);
+
         if (sizeOption) {
             homeContent.setTextSize(40);
         } else {

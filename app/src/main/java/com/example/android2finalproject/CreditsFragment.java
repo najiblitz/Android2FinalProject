@@ -71,6 +71,8 @@ public class CreditsFragment extends Fragment {
         TextView creditContent2 = view.findViewById(R.id.creditContent2);
         TextView creditContent3 = view.findViewById(R.id.creditContent3);
 
+        // Add Settings used
+
         if (sizeOption) {
             creditContent1.setTextSize(40);
             creditContent2.setTextSize(40);

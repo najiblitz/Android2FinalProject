@@ -70,14 +70,22 @@ public class WhatsNewViewPagerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        // Add settings used on Page
+
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         boolean sizeOption = sharedPrefs.getBoolean("textSize", false);
         String colorChoice = sharedPrefs.getString("textColor", "Black");
+
+        // Create view
+
         View view = inflater.inflate(R.layout.fragment_view_pager, container, false);
         TextView title = view.findViewById(R.id.newTitle);
         ImageView picture = view.findViewById(R.id.image);
         TextView size = view.findViewById(R.id.newSize);
         TextView price = view.findViewById(R.id.newPrice);
+
+        // Settings
 
         if (mParam1 != null && mParam2 != 0 && mParam3 != null && mParam4 != null) {
             title.setText(mParam1);

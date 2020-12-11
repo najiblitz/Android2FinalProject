@@ -67,14 +67,20 @@ public class BonusFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bonus, container, false);
 
+        // Add custom tool
+        // Create image button
+
         final ImageButton button = view.findViewById(R.id.bonusButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                // Add image content for bonus coupons
+
                 ArrayList<Integer> images = new ArrayList<>(Arrays.asList(R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tenoff,R.drawable.fifteenoff,R.drawable.twentyoff,R.drawable.twentyfiveoff,R.drawable.fiveoff,R.drawable.gift));
                 Collections.shuffle(images);
 
+                // Set mew image with coupon
                 button.setImageResource(images.get(0));
                 button.setEnabled(false);
             }

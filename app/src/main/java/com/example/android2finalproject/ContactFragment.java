@@ -76,9 +76,14 @@ public class ContactFragment extends Fragment {
         boolean sizeOption = sharedPrefs.getBoolean("buttonSize", false);
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
+        // Set Animations for buttons
+
         Animation animationShort = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in_short);
         Animation animationMedium = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in_short);
         Animation animationLong = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in_short);
+
+
+        // Email
 
         final ImageButton emailButton = view.findViewById(R.id.emailButton);
         emailButton.startAnimation(animationShort);
@@ -98,6 +103,8 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        // Location
+
         ImageButton locationButton = view.findViewById(R.id.locationButton);
         locationButton.startAnimation(animationMedium);
         locationButton.setOnClickListener(new View.OnClickListener(){
@@ -112,6 +119,8 @@ public class ContactFragment extends Fragment {
                 }
             }
         });
+
+        // Instagram
 
         ImageButton instagramButton = view.findViewById(R.id.instagramButton);
         instagramButton.startAnimation(animationMedium);
@@ -128,6 +137,8 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        // Call
+
         ImageButton phoneButton = view.findViewById(R.id.phoneButton);
         phoneButton.startAnimation(animationShort);
         phoneButton.setOnClickListener(new View.OnClickListener() {
@@ -143,6 +154,8 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        // Website
+
         ImageButton websiteButton = view.findViewById(R.id.websiteButton);
         websiteButton.startAnimation(animationMedium);
         websiteButton.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +170,8 @@ public class ContactFragment extends Fragment {
                 }
             }
         });
+
+        // Share website through Text
 
         ImageButton shareButton = view.findViewById(R.id.shareButton);
         shareButton.startAnimation(animationLong);
@@ -175,6 +190,8 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        // Facebook
+
         ImageButton facebookButton = view.findViewById(R.id.facebookButton);
         facebookButton.startAnimation(animationLong);
         facebookButton.setOnClickListener(new View.OnClickListener() {
@@ -189,20 +206,22 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        // Set layout/parameters for Image Buttons
+
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(475,425);
         LinearLayout.LayoutParams largerParams = new LinearLayout.LayoutParams(500,425);
         LinearLayout.LayoutParams smallParams = new LinearLayout.LayoutParams(300,250);
         LinearLayout.LayoutParams smallLargeParams = new LinearLayout.LayoutParams(340,250);
         LinearLayout.LayoutParams shareSmall = new LinearLayout.LayoutParams(400,250);
         LinearLayout.LayoutParams shareLarge = new LinearLayout.LayoutParams(570,425);
-
-
         params.gravity = Gravity.CENTER;
         largerParams.gravity = Gravity.CENTER;
         smallParams.gravity = Gravity.CENTER;
         smallLargeParams.gravity = Gravity.CENTER;
         shareLarge.gravity = Gravity.CENTER;
         shareSmall.gravity = Gravity.CENTER;
+
+        // Add Settings used
 
         if (sizeOption) {
             phoneButton.setLayoutParams(params);
