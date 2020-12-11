@@ -93,6 +93,7 @@ public class DiscountFragment extends Fragment {
 
     public class CustomViewPagerAdapter extends FragmentPagerAdapter {
 
+
         ArrayList<Integer> images = new ArrayList<>(Arrays.asList(R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tryagain,R.drawable.tenoff,R.drawable.fifteenoff,R.drawable.twentyoff,R.drawable.twentyfiveoff,R.drawable.fiveoff,R.drawable.gift));
 
         public CustomViewPagerAdapter(@NonNull FragmentManager fm) {

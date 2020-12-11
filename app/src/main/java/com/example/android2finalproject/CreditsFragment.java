@@ -67,26 +67,40 @@ public class CreditsFragment extends Fragment {
         boolean sizeOption = sharedPrefs.getBoolean("textSize", false);
         String colorChoice = sharedPrefs.getString("textColor", "Black");
         View view =inflater.inflate(R.layout.fragment_credits, container, false);
-        TextView creditContent = view.findViewById(R.id.creditContent);
+        TextView creditContent1 = view.findViewById(R.id.creditContent1);
+        TextView creditContent2 = view.findViewById(R.id.creditContent2);
+        TextView creditContent3 = view.findViewById(R.id.creditContent3);
 
         if (sizeOption) {
-            creditContent.setTextSize(40);
+            creditContent1.setTextSize(40);
+            creditContent2.setTextSize(40);
+            creditContent3.setTextSize(40);
         } else {
-            creditContent.setTextSize(25);
+            creditContent1.setTextSize(25);
+            creditContent2.setTextSize(25);
+            creditContent3.setTextSize(25);
         }
 
         switch (colorChoice) {
             case "Black":
-                creditContent.setTextColor(Color.BLACK);
+                creditContent1.setTextColor(Color.BLACK);
+                creditContent2.setTextColor(Color.BLACK);
+                creditContent3.setTextColor(Color.BLACK);
                 break;
             case "Pink":
-                creditContent.setTextColor(getResources().getColor(R.color.pinkText));
+                creditContent1.setTextColor(getResources().getColor(R.color.pinkText));
+                creditContent2.setTextColor(getResources().getColor(R.color.pinkText));
+                creditContent3.setTextColor(getResources().getColor(R.color.pinkText));
                 break;
             case "Blue":
-                creditContent.setTextColor(getResources().getColor(R.color.darkText));
+                creditContent1.setTextColor(getResources().getColor(R.color.darkText));
+                creditContent2.setTextColor(getResources().getColor(R.color.darkText));
+                creditContent3.setTextColor(getResources().getColor(R.color.darkText));
                 break;
             case "Default":
-                creditContent.setTextColor(getResources().getColor(R.color.darkText));
+                creditContent1.setTextColor(getResources().getColor(R.color.darkText));
+                creditContent2.setTextColor(getResources().getColor(R.color.pinkText));
+                creditContent3.setTextColor(getResources().getColor(R.color.darkText));
                 break;
         }
         return view;

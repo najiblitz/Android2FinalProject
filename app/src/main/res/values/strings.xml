@@ -59,9 +59,9 @@
 
     <string name="creditsTitle">Credits</string>
     <string name="creditContent">CREDITS GO HERE</string>
-
-    // Pictures Used
-    <string name="womens_clothing">Image by <a href="https://pixabay.com/users/counselling-440107/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=483833">Ulrike Mai</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=483833">Pixabay</a></string>
+    <string name="content1">About Us Image by <a href="https://pixabay.com/users/counselling-440107/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=483833"/>Ulrike Mai from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=483833"/>Pixabay</string>
+    <string name="content2">Deals Images by Canva/Najiblitz</string>
+    <string name="content3">Programmed by Amanda Gayer</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

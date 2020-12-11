@@ -24,14 +24,19 @@
             android:id="@+id/nav_contactUs"
             android:icon="@drawable/ic_baseline_call_24"
             android:title="@string/menu_contact" />
-        <item
-            android:id="@+id/nav_discount"
-            android:icon="@drawable/ic_baseline_card_giftcard_24"
-            android:title="@string/menu_discount" />
+<!--        <item-->
+<!--            android:id="@+id/nav_discount"-->
+<!--            android:icon="@drawable/ic_baseline_card_giftcard_24"-->
+<!--            android:title="@string/menu_discount" />-->
         <item
             android:id="@+id/nav_credits"
             android:icon="@drawable/ic_baseline_info_24"
             android:title="@string/creditsTitle" />
+
+        <item
+            android:id="@+id/nav_bonus"
+            android:icon="@drawable/ic_baseline_card_giftcard_24"
+            android:title="@string/menu_discount" />
 
     </group>
 </menu>

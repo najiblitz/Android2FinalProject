@@ -9,18 +9,47 @@
 
     <ImageView
         android:id="@+id/contactUsImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
         android:layout_weight="1"
         android:src="@drawable/credits" />
 
     <TextView
-        android:id="@+id/creditContent"
-        android:layout_width="wrap_content"
-        android:layout_height="571dp"
+        android:id="@+id/creditContent1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:text="@string/content1"
+        android:textAlignment="center"
+        android:textColor="@color/darkText"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/creditContent2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:layout_weight="0"
+        android:text="@string/content2"
+        android:textAlignment="center"
+        android:textColor="@color/darkText"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/creditContent3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:fontFamily="casual"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:text="@string/creditContent"
+        android:text="@string/content3"
         android:textAlignment="center"
         android:textColor="@color/darkText"
         android:textSize="30sp" />
